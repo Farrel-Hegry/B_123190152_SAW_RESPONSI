@@ -96,7 +96,7 @@ x = readmatrix('DATA RUMAH.xlsx',opts);
 k=[0,1,1,1,1,1];%nilai atribut, dimana 0= atribut biaya &1= atribut keuntungan
 w=[0.30,0.20,0.23,0.10,0.07,0.10];% bobot untuk masing-masing kriteria
 
-%tahapan 1. normalisasi matriks
+%normalisasi matriks
 [m n]=size (x); %matriks m x n dengan ukuran sebanyak variabel x (input)
 R=zeros (m,n); %membuat matriks R, yang merupakan matriks kosong
 for j=1:n,
@@ -107,7 +107,7 @@ for j=1:n,
     end;
 end;
 
-%tahapan kedua, proses perangkingan
+%proses perangkingan
 for i=1:m,
  V(i)= sum(w.*R(i,:));
 end;
